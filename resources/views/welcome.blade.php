@@ -38,7 +38,27 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <table>
+                @foreach($data as $key => $region)
+                    <tr>
+                        <td>
+                            {{ $region['continent'] }}
+                        </td>
+                        <td>
+                            {{ $key }}
+                        </td>
+                        <td>
+                            {{ $region['countryCount'] }}
+                        </td>
+                        <td>
+                            {{ $region['cityCount'] }}
+                        </td>
+                        <td>
+                            {{ $region['life'] }}
+                        </td>
+                    </tr>
+                @endforeach
+                </table>
             </div>
         </div>
     </body>
