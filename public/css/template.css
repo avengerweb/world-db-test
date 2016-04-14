@@ -1,0 +1,25 @@
+table.country-container tr:first-child td {
+  background: green; }
+  table.country-container tr:first-child td a {
+    color: #ffffff;
+    text-decoration: underline;
+    display: block;
+    position: relative;
+    padding-right: 20px; }
+    table.country-container tr:first-child td a .glyphicon {
+      position: absolute;
+      right: 0;
+      display: none; }
+    table.country-container tr:first-child td a.desc .glyphicon, table.country-container tr:first-child td a.asc .glyphicon {
+      display: block; }
+    table.country-container tr:first-child td a.desc.desc .glyphicon, table.country-container tr:first-child td a.asc.desc .glyphicon {
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg); }
+table.country-container tr td {
+  padding: 5px; }
+  table.country-container tr td:nth-child(3), table.country-container tr td:nth-child(4), table.country-container tr td:nth-child(5), table.country-container tr td:nth-child(6), table.country-container tr td:nth-child(7) {
+    text-align: center; }
+
+/*# sourceMappingURL=template.css.map */

@@ -38,6 +38,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Country whereCapital($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Country whereCode2($value)
  * @mixin \Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\City[] $cities
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\CountryLanguage[] $languages
  */
 class Country extends Model
 {
@@ -47,7 +49,21 @@ class Country extends Model
     public $timestamps = false;
     public $incrementing = false;
 
+    /**
+     *  Getting cities for current country
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function cities() {
         return $this->hasMany(City::class, "CountryCode");
+    }
+
+    /**
+     * Getting languages for current country
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function languages() {
+        return $this->hasMany(CountryLanguage::class, "CountryCode");
     }
 }

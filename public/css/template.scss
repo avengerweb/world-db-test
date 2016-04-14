@@ -1,0 +1,49 @@
+@import "modules/mixin";
+
+table.country-container {
+  tr:first-child {
+    td {
+      background: green;
+      a {
+        color: #ffffff;
+        text-decoration: underline;
+        display: block;
+        position: relative;
+        padding-right: 20px;
+
+        .glyphicon {
+          position: absolute;
+          right: 0;
+          display: none;
+        }
+
+        &.desc,
+        &.asc {
+          .glyphicon {
+            display: block;
+          }
+
+          &.desc {
+            .glyphicon {
+              @include rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  tr {
+    td {
+      padding: 5px;
+
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7) {
+        text-align: center;
+      }
+    }
+  }
+}
